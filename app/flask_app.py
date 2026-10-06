@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request
+from prometheus_flask_exporter import PrometheusMetrics
 import pandas as pd
 import joblib
 import os
 
 app = Flask(__name__)
+
+metrics = PrometheusMetrics(app)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "..", "models")

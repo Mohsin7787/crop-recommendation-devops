@@ -6,3 +6,4 @@ scikit-learn==1.8.0
 joblib==1.5.2
 gunicorn==23.0.0
 pytest
+prometheus-flask-exporter
